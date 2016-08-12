@@ -3,7 +3,7 @@
 </div>
 
 <div class="col-sm-6" *ngIf="mealList.length != 0">
-  <select (change)="onChange($event.target.value)">
+  <select class="filter" (change)="onChange($event.target.value)">
     <option value="all" selected="selected">Show All</option>
     <option value="highCalories">Show High Calories</option>
     <option value="lowCalories">Show Low Calories</option>
@@ -11,7 +11,6 @@
 
   <meal-display *ngFor="#currentMeal of mealList | calories:selectedCalories"
   (click)="mealClicked(currentMeal)"
-  [class.selected]="currentMeal === selectedMeal"
   [meal]="currentMeal">
   </meal-display>
 </div>
