@@ -1,5 +1,5 @@
-<div>
-  <input *ngIf="meal.calories === true" type="checkbox" checked (click)="toggleDone(false)"/>
-  <input *ngIf="meal.calories === false" type="checkbox" (click)="toggleDone(true)"/>
-  <label>{{ meal.description }}</label>
+<div meals>
+  <h4>Name: {{ meal.name }}</h4>
+  <h4>Details: {{ meal.details }}</h4>
+  <h4>Calories: {{ meal.calories }}</h4>
 </div>

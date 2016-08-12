@@ -3,7 +3,7 @@ import { MealComponent } from './meal.component';
 import { Meal } from './meal.model';
 import { EditMealDetailsComponent } from './edit-meal-details.component';
 import { NewMealComponent } from './new-meal.component';
-import {CaloriesPipe} from './completeness.pipe';
+import {CaloriesPipe} from './calories.pipe';
 
 @Component({
   selector: 'meal-list',
@@ -34,7 +34,7 @@ export class MealListComponent {
   createMeal(description: string[]): void {
 
     this.mealList.push(
-      new Meal(description[0], parseInt(description[1]) , this.mealList.length)
+      new Meal(description[0], description[1] , parseInt(description[2]) , this.mealList.length)
     );
   }
   onChange(optionFromMenu) {
