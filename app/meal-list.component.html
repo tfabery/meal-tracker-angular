@@ -1,4 +1,8 @@
-<div class="col-sm-6">
+<div class="col-sm-6" *ngIf="mealList.length === 0">
+<h2>Welcome to Meal Tracker</h2>
+</div>
+
+<div class="col-sm-6" *ngIf="mealList.length != 0">
   <select (change)="onChange($event.target.value)">
     <option value="all" selected="selected">Show All</option>
     <option value="highCalories">Show High Calories</option>
@@ -11,6 +15,7 @@
   [meal]="currentMeal">
   </meal-display>
 </div>
+
 <div class="col-sm-6">
   <edit-meal-details *ngIf="selectedMeal" [meal]="selectedMeal"></edit-meal-details>
   <new-meal (onSubmitNewMeal)="createMeal($event)"></new-meal>

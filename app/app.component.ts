@@ -7,7 +7,7 @@ import { Meal } from './meal.model';
   directives: [MealListComponent],
   template: `
     <div class="container">
-      <h1>To-Do List</h1>
+      <h1>Meal Tracker</h1>
       <meal-list
         [mealList]="meals"
         (onMealSelect)="mealWasSelected($event)">
@@ -18,12 +18,7 @@ import { Meal } from './meal.model';
 export class AppComponent {
   public meals: Meal[];
   constructor(){
-    this.meals = [
-      new Meal("burger", "burgered out" , 500 , 1),
-      new Meal("salad", "saladed out" , 200 , 2),
-      new Meal("fries", "fried out" , 400 , 3),
-      new Meal("chicken", "chickened out" , 300 , 4)
-    ];
+    this.meals = [];
   }
   mealWasSelected(clickedMeal: Meal): void {
     console.log('parent', clickedMeal);
