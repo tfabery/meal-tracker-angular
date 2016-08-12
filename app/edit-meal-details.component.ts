@@ -7,15 +7,15 @@ import {Meal} from './meal.model';
   template: `
     <div>
       <h3>Edit Meal Name: </h3>
-      <input [(ngModel)]="meal.name" class="col-sm-8 input-lg"/>
+      <input [(ngModel)]="meal.name" class="input-lg"/>
     </div>
-    <div class="meal-form">
+    <div>
       <h3>Edit Details: </h3>
-      <input [(ngModel)]="meal.details" class="col-sm-8 input-lg"/>
+      <input [(ngModel)]="meal.details" class="input-lg"/>
     </div>
-    <div class="meal-form">
+    <div>
       <h3>Edit Calories: </h3>
-      <input [(ngModel)]="meal.calories" class="col-sm-8 input-lg"/>
+      <input [(ngModel)]="meal.calories" class="input-lg"/>
     </div>
   `
 })

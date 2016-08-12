@@ -9,13 +9,13 @@ import { Meal } from './meal.model';
     <h3>Create Meal:</h3>
     <form class="form-group">
       <div class="form-group">
-        <input placeholder="Meal Name" class="col-sm-8 input-lg" #newMealName>
+        <input placeholder="Meal Name" class="input-lg" #newMealName>
       </div>
       <div class="form-group">
-        <input placeholder="Details" class="col-sm-8 input-lg" #newDetails>
+        <input placeholder="Details" class="input-lg" #newDetails>
       </div>
       <div class="form-group">
-        <input placeholder="Calories" class="col-sm-8 input-lg" #newCalories>
+        <input placeholder="Calories" class="input-lg" #newCalories>
       </div>
       <div class="form-group">
         <button (click)="addMeal(newMealName, newDetails , newCalories)" class="btn-lg btn-success">Add</button>
