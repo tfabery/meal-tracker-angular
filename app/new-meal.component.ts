@@ -4,25 +4,7 @@ import { Meal } from './meal.model';
 @Component({
   selector: 'new-meal',
   outputs: ['onSubmitNewMeal'],
-  template: `
-  <div class="meal-form">
-    <h3>Create Meal:</h3>
-    <form class="form-group">
-      <div class="form-group">
-        <input placeholder="Meal Name" class="input-lg" #newMealName>
-      </div>
-      <div class="form-group">
-        <input placeholder="Details" class="input-lg" #newDetails>
-      </div>
-      <div class="form-group">
-        <input placeholder="Calories" class="input-lg" #newCalories>
-      </div>
-      <div class="form-group">
-        <button (click)="addMeal(newMealName, newDetails , newCalories)" class="btn-lg btn-success">Add</button>
-      </div>
-    </form>
-  </div>
-  `
+  templateUrl: 'app/new-meal.component.html'
 })
 
 export class NewMealComponent {
