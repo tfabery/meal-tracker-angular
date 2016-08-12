@@ -1,5 +1,5 @@
-import {Component, EventEmitter} from 'angular2/core';
-import {Meal} from './meal.model';
+import { Component, EventEmitter } from 'angular2/core';
+import { Meal } from './meal.model';
 
 @Component({
   selector: 'new-meal',
@@ -7,11 +7,20 @@ import {Meal} from './meal.model';
   template: `
   <div class="meal-form">
     <h3>Create Meal:</h3>
-    <input placeholder="Meal Name" class="col-sm-8 input-lg" #newMealName>
-    <input placeholder="Details" class="col-sm-8 input-lg" #newDetails>
-    <input placeholder="Calories" class="col-sm-8 input-lg" #newCalories>
-    <br>
-    <button (click)="addMeal(newMealName, newDetails , newCalories)" class="btn-lg">Add</button>
+    <form class="form-group">
+      <div class="form-group">
+        <input placeholder="Meal Name" class="col-sm-8 input-lg" #newMealName>
+      </div>
+      <div class="form-group">
+        <input placeholder="Details" class="col-sm-8 input-lg" #newDetails>
+      </div>
+      <div class="form-group">
+        <input placeholder="Calories" class="col-sm-8 input-lg" #newCalories>
+      </div>
+      <div class="form-group">
+        <button (click)="addMeal(newMealName, newDetails , newCalories)" class="btn-lg btn-success">Add</button>
+      </div>
+    </form>
   </div>
   `
 })

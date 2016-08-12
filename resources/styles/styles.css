@@ -17,3 +17,7 @@
 .meals {
   margin-top: 30px;
 }
+
+.form-group {
+  display: block;
+}
